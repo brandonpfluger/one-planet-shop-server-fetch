@@ -1,17 +1,13 @@
 
 import './App.css';
 import {useState, useEffect} from 'react';
+import Products from './components/Products';
+import Product from './components/Product';
 
 function App() {
-    const [products, setProducts] = useState([]);
+    
     const [blogPosts, setBlogPosts] = useState([]);
     const [reviews, setReviews] = useState([]);
-
-    useEffect(() => {
-      fetch('http://localhost:7070/products')
-      .then((res) => res.json())
-      .then((res) => setProducts(res));
-    },[])
 
     useEffect(() => {
       fetch('http://localhost:7070/blogposts')
@@ -28,18 +24,8 @@ function App() {
 
     return (
       <>
-      <div>
-        {products.map((product, index) => 
-        (
-          <>
-            <h1>{product.title}</h1>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-            <p>{product.weight}</p>
-          </>
-        ))}
-      </div>
       <div className="App">
+        <Products />
       {blogPosts.map((post, index) =>
         (<>
           <h1>{post.blogTitle}</h1>
