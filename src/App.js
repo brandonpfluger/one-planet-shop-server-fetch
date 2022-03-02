@@ -1,48 +1,22 @@
 
 import './App.css';
-import {useState, useEffect} from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Products from './components/Products';
 import Product from './components/Product';
+import Blog from './components/Blog';
+import Reviews from './components/Reviews';
 
 function App() {
-    
-    const [blogPosts, setBlogPosts] = useState([]);
-    const [reviews, setReviews] = useState([]);
-
-    useEffect(() => {
-      fetch('http://localhost:7070/blogposts')
-      .then((res) => res.json())
-      .then((res) => setBlogPosts(res));
-    },[])
-
-    useEffect(() => {
-      fetch('http://localhost:7070/reviews')
-      .then((res) => res.json())
-      .then((res) => setReviews(res));
-    },[])
-
 
     return (
       <>
       <div className="App">
-        <Products />
-      {blogPosts.map((post, index) =>
-        (<>
-          <h1>{post.blogTitle}</h1>
-        <p>{post.blogText}</p>
-        </>
-        ))
-      }
-      </div>
-      <div>
-        {reviews.map((review, index) =>
-        (
-          <>
-          <h2>{review.headline}</h2>
-          <p>{review.review}</p>
-          <p>{review.rating}</p>
-          </>
-        ))}
+         I am the placeholder homepage
+        <Routes>
+          <Route path='/shop' element={<Products />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/reviews' element={<Reviews />} />
+        </Routes>
       </div>
       </>
     );
