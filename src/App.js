@@ -8,12 +8,18 @@ import Reviews from './components/Reviews';
 
 function App() {
 
+  function Home() {
+    return  'I am the placeholder homepage'
+  }
+
     return (
       <>
       <div className="App">
-         I am the placeholder homepage
+        
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/shop' element={<Products />} />
+          <Route path='/shop/:productId' element={<Product />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/reviews' element={<Reviews />} />
         </Routes>
