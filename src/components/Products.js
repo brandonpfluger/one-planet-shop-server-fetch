@@ -1,3 +1,5 @@
+import '../styles/products.css'
+
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -11,16 +13,21 @@ export default function Products() {
     },[])
 
     return (
-        <div>
+        <main>
+            <h1>Products</h1>
+            <div className='product-grid'>
             {products.map((product, index) => 
             (
                 <NavLink to={product.title} key={product.id}>
-                    <h1>{product.title}</h1>
-                    {/* <p>{product.description}</p> */}
-                    <p>{product.price}</p>
-                    {/* <p>{product.weight}</p> */}
+                    <div className='product-listing'>
+                        <p className='product-title'>{product.title}</p>
+                        {/* <p>{product.description}</p> */}
+                        <p className='product-price'>{product.price}</p>
+                        {/* <p>{product.weight}</p> */}
+                    </div>    
                 </NavLink>
             ))}
-        </div>
+            </div>
+        </main>
     )
 }
