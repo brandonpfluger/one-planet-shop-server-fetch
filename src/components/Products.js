@@ -20,6 +20,7 @@ export default function Products() {
             (
                 <NavLink to={product.title} key={product.id}>
                     <div className='product-listing'>
+                        <img className='product-image__main' src={`http://localhost:7070/images/${product.images[0]}`} alt=''></img>
                         <p className='product-title'>{product.title}</p>
                         {/* <p>{product.description}</p> */}
                         <p className='product-price'>{product.price}</p>
