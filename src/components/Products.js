@@ -8,7 +8,6 @@ export default function Products() {
         fetch('http://localhost:7070/products')
         .then((res) => res.json())
         .then((res) => setProducts(res))
-        // .then(console.log(products))
     },[])
 
     return (
