@@ -4,7 +4,7 @@ export default function Blog() {
     const [blogPosts, setBlogPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7070/blogposts')
+        fetch('http://one-planet-server.herokuapp.com/blogposts')
         .then((res) => res.json())
         .then((res) => setBlogPosts(res));
       },[])

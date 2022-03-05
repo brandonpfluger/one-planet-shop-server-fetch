@@ -7,7 +7,7 @@ export default function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7070/products')
+        fetch('http://one-planet-server.herokuapp.com/products')
         .then((res) => res.json())
         .then((res) => setProducts(res))
     },[])

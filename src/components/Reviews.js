@@ -4,7 +4,7 @@ export default function Review() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7070/reviews')
+        fetch('http://one-planet-server.herokuapp.com/reviews')
         .then((res) => res.json())
         .then((res) => setReviews(res));
       },[])  
