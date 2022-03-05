@@ -64,22 +64,6 @@ main p {
 }
 
 @media screen and (min-width: 992px) {
-  .nav-button {
-    display: none;
-  }
-
-  .menuNav {
-    direction: flex;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: unset;
-    width: 30%;
-  }
-
-  .menuNav a {
-    display: unset;
-  }
-
   .tagline {
     font-size: 2.5em;
     margin: auto;

@@ -49,3 +49,21 @@ header a {
     border: none;
     margin-right: 1rem;
 }
+
+@media screen and (min-width: 992px) {
+    .nav-button {
+      display: none;
+    }
+  
+    .menuNav {
+      direction: flex;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      position: unset;
+      width: 30%;
+    }
+  
+    .menuNav a {
+      display: unset;
+    }
+  }
