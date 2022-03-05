@@ -18,9 +18,9 @@ export default function Products() {
             <div className='product-grid'>
             {products.map((product, index) => 
             (
-                <NavLink to={product.title} key={product.id}>
+                <NavLink to={`${product.slug}`} key={product.id}>
                     <div className='product-listing'>
-                        <img className='product-image__main' src={`http://localhost:7070/images/${product.images[0]}`} alt=''></img>
+                        <img className='product-image__main' src={`https://one-planet-server.herokuapp.com/images/${product.images[0]}`} alt=''></img>
                         <p className='product-title'>{product.title}</p>
                         {/* <p>{product.description}</p> */}
                         <p className='product-price'>{product.price}</p>
