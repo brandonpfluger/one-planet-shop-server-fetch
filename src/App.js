@@ -2,6 +2,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 import Products from './components/Products';
 // import Product from './components/Product';
 import Blog from './components/Blog';
@@ -9,11 +10,6 @@ import Reviews from './components/Reviews';
 
 
 function App() {
-
-  function Home() {
-    return  'I am the placeholder homepage'
-  }
-
     return (
       <>
       <div className="App">

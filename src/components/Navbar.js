@@ -24,6 +24,7 @@ export default function Navbar() {
         <nav>
           <button className='nav-button' onClick={handleNavbarToggle}>{navbarOpen ? <AiOutlineClose /> : <TiThMenu />}</button>
           <div className={`menuNav ${navbarOpen ? "showMenu" : ""}`}>
+            <NavLink onClick={() => closeMenu()} to="/"  >Home</NavLink>
             <NavLink onClick={() => closeMenu()} to="/blog"  >Blog</NavLink>
             <NavLink onClick={() => closeMenu()} to="/shop" >Shop</NavLink>
             <NavLink onClick={() => closeMenu()} to="/reviews" >Reviews</NavLink>
