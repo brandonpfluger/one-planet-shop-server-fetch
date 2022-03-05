@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+  
+.logo__leaves {
+    margin-left: 1rem;
+    max-height: 2.2rem;
+}
+  
+.menuNav {
+    background-color: white;
+    height: 100vh;
+    right: -50vw;
+    position: absolute;
+    transition: all .5s ease;
+    width: 50vw;
+}
+  
+.menuNav.showMenu {
+    right: 0;
+    text-align: right;
+    transition: all .5s ease;
+}
+  
+.menuNav.showMenu a {
+    display: block;
+    text-align: right;
+}
+  
+a {
+    color: var(--brand-green);
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+  
+header a {
+    padding: 0.25rem;
+}
+  
+.nav-button {
+    border: none;
+    margin-right: 1rem;
+}
