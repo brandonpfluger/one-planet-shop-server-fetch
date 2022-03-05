@@ -8,14 +8,14 @@ export default function Products() {
         fetch('http://localhost:7070/products')
         .then((res) => res.json())
         .then((res) => setProducts(res))
-        .then(console.log(products))
+        // .then(console.log(products))
     },[])
 
     return (
         <div>
             {products.map((product, index) => 
             (
-                <NavLink to={product.slug} key={product.id}>
+                <NavLink to={product.title} key={product.id}>
                     <h1>{product.title}</h1>
                     {/* <p>{product.description}</p> */}
                     <p>{product.price}</p>
